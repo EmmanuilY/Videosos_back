@@ -6,7 +6,6 @@ from .. import serializer
 from ..services import google
 
 
-
 @api_view(["POST"])
 def google_auth(request):
     """ Подтверждение авторизации через Google

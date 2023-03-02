@@ -50,7 +50,7 @@ class Season(models.Model):
         verbose_name_plural = "seasons"
 
     def __str__(self):
-        return str(self.number)+str(self.name_serial)
+        return str(self.number) + str(self.name_serial)
 
 
 class Series(models.Model):

@@ -67,7 +67,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'videosos_dev',
         'USER': 'postgres',
-        'PASSWORD': 'privet615',
+        'PASSWORD': '1488',
         'HOST': 'localhost',
         'PORT': '5433',
     }

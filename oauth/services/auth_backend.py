@@ -6,8 +6,6 @@ from django.conf import settings
 from rest_framework import authentication, exceptions
 
 
-
-
 class AuthBackend(authentication.BaseAuthentication):
     authentication_header_prefix = 'Token'
 
@@ -44,19 +42,8 @@ class AuthBackend(authentication.BaseAuthentication):
             raise exceptions.AuthenticationFailed('Token expired.')
 
         try:
-             user = User.objects.get(id=payload['user_id'])
+            user = User.objects.get(id=payload['user_id'])
         except User.DoesNotExist:
-           raise exceptions.AuthenticationFailed('No user matching this token was found.')
+            raise exceptions.AuthenticationFailed('No user matching this token was found.')
 
-        return  user, None
-
-
-
-
-
-
-
-
-
-
-
+        return user, None

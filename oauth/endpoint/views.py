@@ -2,7 +2,6 @@ from rest_framework import viewsets, parsers, permissions
 from .. import serializer
 
 
-
 class UserView(viewsets.ModelViewSet):
     """ Просмотр и редактирование данных пользователя
     """
@@ -15,14 +14,3 @@ class UserView(viewsets.ModelViewSet):
 
     def get_object(self):
         return self.get_queryset()
-
-
-
-
-
-
-
-
-
-
-
